@@ -1,0 +1,43 @@
+workflow_id: WF-003
+label_fa: "فرآیند کامل نقل و انتقال خودرو"
+nodes:
+  - id: SAKHA-RESIDENCE-CHECK
+    type: prerequisite
+    label_fa: "احراز محل سکونت خریدار در سخا"
+    depends_on: []
+    note: "این یک گام مستقل است، ID اختصاصی در Catalog ندارد ولی پیش‌نیاز اجباری VEH-004 است."
+
+  - id: VEH-002
+    type: step
+    label_fa: "استعلام خلافی خودرو"
+    depends_on: [SAKHA-RESIDENCE-CHECK]
+
+  - id: VEH-003
+    type: conditional
+    label_fa: "پرداخت خلافی"
+    depends_on: [VEH-002]
+    condition: "فقط اگر خلافی وجود دارد. حذف بدهی از سامانه 24 تا 72 ساعت طول می‌کشد."
+
+  - id: TECH-INSPECTION-CHECK
+    type: conditional
+    label_fa: "بررسی معاینه فنی معتبر"
+    depends_on: [VEH-002]
+    condition: "اگر منقضی است، باید خارج از کافینت تمدید شود قبل از ادامه."
+
+  - id: VEH-008
+    type: step
+    label_fa: "نوبت‌گیری مرکز تعویض پلاک"
+    depends_on: [VEH-003, TECH-INSPECTION-CHECK]
+
+  - id: VEH-004
+    type: step
+    label_fa: "مراجعه حضوری - نقل و انتقال نهایی"
+    depends_on: [VEH-008]
+    note: "این مرحله همیشه حضوری است، کافینت نمی‌تواند جایگزین شود."
+
+  - id: VEH-001
+    type: end
+    label_fa: "دریافت پلاک جدید"
+    depends_on: [VEH-004]
+
+edges_note: "برخلاف WF-001 و WF-002، این فرآیند همیشه به یک مرحله حضوری اجباری (VEH-004) ختم می‌شود."

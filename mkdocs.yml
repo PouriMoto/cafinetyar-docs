@@ -1,0 +1,205 @@
+site_name: CafeNet OS - راهنمای خدمات کافینت
+site_description: مرجع کامل روال‌های عملیاتی خدمات کافینت
+site_author: CafeNet OS
+
+theme:
+  name: material
+  language: fa
+  direction: rtl
+  palette:
+    primary: teal
+    accent: amber
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: 
+        - fa
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - stylesheets/rtl-fix.css
+
+nav:
+  - خانه: index.md
+  - "فرآیندهای چندمرحله‌ای":
+      - "جواز تاسیس (کسب‌وکار)": workflows/business-license.md
+      - "کارت بازرگانی (حقیقی)": workflows/trade-card.md
+      - "نقل و انتقال خودرو": workflows/vehicle-transfer.md
+      - "تمدید حق‌العمل‌کاری گمرک": workflows/customs-broker-license.md
+  - بانکی:
+      - "افتتاح حساب غیرحضوری (BNK-001)": banking/BNK-001/index.md
+      - "ثبت چک صیادی (BNK-002)": banking/BNK-002/index.md
+      - "استعلام چک صیادی (BNK-003)": banking/BNK-003/index.md
+      - "انتقال چک (BNK-004)": banking/BNK-004/index.md
+      - "رفع سوءاثر چک (BNK-005)": banking/BNK-005/index.md
+  - کسب و کار:
+      - "کد اقتصادی (BUS-005)": business/BUS-005/index.md
+      - "جواز کسب (BUS-008)": business/BUS-008/index.md
+      - "ثبت درخواست مجوز در درگاه ملی مجوزها (BUS-011)": business/BUS-011/index.md
+      - "پیگیری وضعیت درخواست مجوز (BUS-012)": business/BUS-012/index.md
+      - "بارگذاری مدارک مجوز کسب‌وکار (BUS-014)": business/BUS-014/index.md
+      - "تمدید مجوز کسب‌وکار (BUS-016)": business/BUS-016/index.md
+      - "ثبت و اصلاح نشانی محل فعالیت (BUS-017)": business/BUS-017/index.md
+      - "درخواست گواهی ماده ۱۸۶ مالیات مستقیم (BUS-020)": business/BUS-020/index.md
+      - "دریافت توکن امضای دیجیتال شرکتی (BUS-031)": business/BUS-031/index.md
+  - ثبت احوال:
+      - "تعویض کارت ملی (REG-001)": civil-registry/REG-001/index.md
+      - "پیگیری کارت ملی (REG-002)": civil-registry/REG-002/index.md
+      - "ثبت درخواست شناسنامه (REG-003)": civil-registry/REG-003/index.md
+      - "تعویض شناسنامه (REG-004)": civil-registry/REG-004/index.md
+      - "ثبت ولادت (REG-006)": civil-registry/REG-006/index.md
+      - "صدور گواهی تجرد آنلاین (REG-008)": civil-registry/REG-008/index.md
+      - "دسترسی به سامانه سهیم (REG-009)": civil-registry/REG-009/index.md
+  - خدمات عمومی کافینت:
+      - "پرینت سیاه و سفید (CORE-001)": core/CORE-001/index.md
+      - "پرینت رنگی (CORE-002)": core/CORE-002/index.md
+      - "کپی سیاه و سفید (CORE-004)": core/CORE-004/index.md
+      - "اسکن مدارک (CORE-006)": core/CORE-006/index.md
+      - "تایپ فارسی (CORE-009)": core/CORE-009/index.md
+      - "ویرایش فایل Word (CORE-012)": core/CORE-012/index.md
+      - "ویرایش PDF (CORE-013)": core/CORE-013/index.md
+      - "تبدیل PDF به Word (CORE-014)": core/CORE-014/index.md
+      - "تبدیل Word به PDF (CORE-015)": core/CORE-015/index.md
+      - "ساخت PDF (CORE-019)": core/CORE-019/index.md
+      - "پرینت پایان‌نامه (CORE-022)": core/CORE-022/index.md
+      - "لمینت (CORE-023)": core/CORE-023/index.md
+      - "فنر زنی (CORE-024)": core/CORE-024/index.md
+      - "پرینت از فلش (CORE-028)": core/CORE-028/index.md
+      - "پرینت از موبایل (CORE-029)": core/CORE-029/index.md
+      - "تایپ فرم (CORE-039)": core/CORE-039/index.md
+      - "تنظیم رزومه (CORE-040)": core/CORE-040/index.md
+      - "ساخت رزومه (CORE-041)": core/CORE-041/index.md
+      - "ثبت‌نام آزمون‌ها (CORE-043)": core/CORE-043/index.md
+      - "نوبت‌گیری اینترنتی (CORE-044)": core/CORE-044/index.md
+      - "پرداخت قبوض (CORE-046)": core/CORE-046/index.md
+  - گمرک و تجارت:
+      - "صدور کارت بازرگانی شخص حقیقی (CUS-006)": customs/CUS-006/index.md
+      - "تمدید کارت بازرگانی (CUS-007)": customs/CUS-007/index.md
+      - "ثبت‌نام سامانه جامع تجارت ایران (CUS-010)": customs/CUS-010/index.md
+      - "تمدید پروانه کارگزاری (حق‌العمل‌کاری) گمرکی (CUS-019)": customs/CUS-019/index.md
+  - خدمات دیجیتال:
+      - "بازیابی رمز عبور (DIG-004)": digital/DIG-004/index.md
+      - "احراز هویت آنلاین (DIG-005)": digital/DIG-005/index.md
+      - "امضای الکترونیکی (DIG-006)": digital/DIG-006/index.md
+      - "ساخت فایل PDF (DIG-008)": digital/DIG-008/index.md
+      - "رجیستری و استعلام اصالت گوشی (DIG-011)": digital/DIG-011/index.md
+      - "انتقال مالکیت گوشی در همتا (DIG-012)": digital/DIG-012/index.md
+  - آموزش و مدارس:
+      - "ثبت‌نام پایه اول (EDU-001)": edu/EDU-001/index.md
+      - "ثبت‌نام پایه هفتم (EDU-002)": edu/EDU-002/index.md
+      - "ثبت‌نام پایه دهم (EDU-003)": edu/EDU-003/index.md
+      - "پیش ثبت‌نام مدارس (EDU-004)": edu/EDU-004/index.md
+      - "خدمات مای مدیو (EDU-020)": edu/EDU-020/index.md
+  - سلامت:
+      - "نوبت‌دهی پزشک (HLT-001)": health/HLT-001/index.md
+      - "نسخه الکترونیک (HLT-002)": health/HLT-002/index.md
+  - بیمه:
+      - "بیمه سلامت (INS-001)": insurance/INS-001/index.md
+      - "استعلام بیمه سلامت (INS-002)": insurance/INS-002/index.md
+      - "تمدید بیمه سلامت (INS-004)": insurance/INS-004/index.md
+      - "بیمه تأمین اجتماعی (INS-005)": insurance/INS-005/index.md
+      - "بیمه مشاغل آزاد (INS-006)": insurance/INS-006/index.md
+      - "استعلام سابقه بیمه (INS-008)": insurance/INS-008/index.md
+      - "دریافت سابقه بیمه (INS-009)": insurance/INS-009/index.md
+  - قوه قضائیه:
+      - "ثبت‌نام ثنا (JUD-001)": judiciary/JUD-001/index.md
+      - "بازیابی ثنا (JUD-002)": judiciary/JUD-002/index.md
+      - "ویرایش اطلاعات ثنا (JUD-003)": judiciary/JUD-003/index.md
+      - "ابلاغ الکترونیک (JUD-004)": judiciary/JUD-004/index.md
+      - "ثبت دادخواست (JUD-005)": judiciary/JUD-005/index.md
+      - "ثبت شکوائیه (JUD-006)": judiciary/JUD-006/index.md
+      - "ثبت اظهارنامه (JUD-007)": judiciary/JUD-007/index.md
+      - "پیگیری پرونده (JUD-010)": judiciary/JUD-010/index.md
+      - "درخواست گواهی عدم سوء پیشینه (JUD-011)": judiciary/JUD-011/index.md
+  - سایر خدمات:
+      - "تنظیم قولنامه خودرو (ETC-007)": other/ETC-007/index.md
+      - "تنظیم قولنامه ملک (ETC-008)": other/ETC-008/index.md
+      - "تنظیم وکالت‌نامه عادی (ETC-010)": other/ETC-010/index.md
+      - "تنظیم رضایت‌نامه گذشت شاکی (ETC-011)": other/ETC-011/index.md
+  - حج و زیارت:
+      - "ثبت‌نام سماح (PIL-001)": pilgrimage/PIL-001/index.md
+      - "ارز اربعین (PIL-002)": pilgrimage/PIL-002/index.md
+      - "پیگیری سماح (PIL-006)": pilgrimage/PIL-006/index.md
+  - پلیس + ۱۰:
+      - "ثبت‌نام سخا (POL-001)": police/POL-001/index.md
+      - "بازیابی سخا (POL-002)": police/POL-002/index.md
+      - "گذرنامه (POL-003)": police/POL-003/index.md
+      - "تمدید گذرنامه (POL-004)": police/POL-004/index.md
+      - "گذرنامه زیارتی (POL-005)": police/POL-005/index.md
+      - "گواهی سوء پیشینه (POL-006)": police/POL-006/index.md
+      - "مجوز خروج از کشور (POL-007)": police/POL-007/index.md
+      - "استعلام ممنوع الخروجی (POL-008)": police/POL-008/index.md
+      - "پیگیری گذرنامه (POL-009)": police/POL-009/index.md
+      - "خدمات نظام وظیفه (POL-010)": police/POL-010/index.md
+      - "تعویض کارت پایان خدمت (POL-011)": police/POL-011/index.md
+      - "معافیت تحصیلی (POL-012)": police/POL-012/index.md
+      - "استعلام وضعیت سربازی (POL-013)": police/POL-013/index.md
+  - املاک (خودنویس):
+      - "ثبت اجاره‌نامه در خودنویس (REA-001)": real-estate/REA-001/index.md
+      - "استعلام کد رهگیری اجاره‌نامه (REA-002)": real-estate/REA-002/index.md
+      - "ثبت ملک در سامانه املاک و اسکان (REA-003)": real-estate/REA-003/index.md
+      - "ویرایش/تمدید اجاره‌نامه خودنویس (REA-004)": real-estate/REA-004/index.md
+  - مالیات:
+      - "ثبت‌نام مالیاتی (TAX-001)": tax/TAX-001/index.md
+      - "تشکیل پرونده مالیاتی (TAX-002)": tax/TAX-002/index.md
+      - "اظهارنامه مالیاتی (TAX-003)": tax/TAX-003/index.md
+      - "مالیات مشاغل (TAX-004)": tax/TAX-004/index.md
+      - "مالیات اشخاص حقیقی (TAX-005)": tax/TAX-005/index.md
+      - "استعلام بدهی مالیاتی (TAX-011)": tax/TAX-011/index.md
+      - "ارسال اظهارنامه ارزش افزوده فصلی (TAX-013)": tax/TAX-013/index.md
+      - "استفاده از تبصره ماده 100 (TAX-014)": tax/TAX-014/index.md
+      - "ثبت نام سامانه مودیان و کارپوشه (TAX-015)": tax/TAX-015/index.md
+      - "ثبت کارتخوان و پذیرنده بانکی (TAX-016)": tax/TAX-016/index.md
+      - "ارسال لیست مالیات حقوق تکلیفی (TAX-017)": tax/TAX-017/index.md
+      - "مشاهده و پرداخت قبوض مالیاتی (TAX-019)": tax/TAX-019/index.md
+      - "مشاهده ابلاغیه الکترونیکی مالیاتی (TAX-020)": tax/TAX-020/index.md
+      - "استعلام گروه‌بندی مشاغل مالیاتی (TAX-021)": tax/TAX-021/index.md
+  - مخابرات:
+      - "ثبت‌نام سیم‌کارت (TEL-001)": telecom/TEL-001/index.md
+      - "ترابرد (TEL-002)": telecom/TEL-002/index.md
+      - "استعلام سیم‌کارت (TEL-003)": telecom/TEL-003/index.md
+      - "استعلام مالکیت سیم‌کارت (TEL-004)": telecom/TEL-004/index.md
+      - "تغییر مالکیت سیم‌کارت (TEL-005)": telecom/TEL-005/index.md
+  - دانشگاه:
+      - "ثبت‌نام کنکور (UNI-001)": uni/UNI-001/index.md
+      - "ویرایش اطلاعات کنکور (UNI-002)": uni/UNI-002/index.md
+      - "انتخاب رشته (UNI-003)": uni/UNI-003/index.md
+      - "ثبت‌نام دانشگاه آزاد (UNI-004)": uni/UNI-004/index.md
+      - "سامانه گلستان (UNI-009)": uni/UNI-009/index.md
+  - آب برق گاز:
+      - "استعلام قبض (UTL-001)": utilities/UTL-001/index.md
+      - "پرداخت قبض (UTL-002)": utilities/UTL-002/index.md
+      - "تغییر نام مشترک (UTL-003)": utilities/UTL-003/index.md
+      - "ثبت درخواست انشعاب (UTL-004)": utilities/UTL-004/index.md
+      - "پیگیری درخواست (UTL-005)": utilities/UTL-005/index.md
+  - خودرو:
+      - "تعویض پلاک (VEH-001)": vehicle/VEH-001/index.md
+      - "استعلام خلافی (VEH-002)": vehicle/VEH-002/index.md
+      - "پرداخت خلافی (VEH-003)": vehicle/VEH-003/index.md
+      - "نقل و انتقال خودرو (VEH-004)": vehicle/VEH-004/index.md
+      - "استعلام پلاک فعال (VEH-005)": vehicle/VEH-005/index.md
+      - "نوبت تعویض پلاک (VEH-008)": vehicle/VEH-008/index.md
+  - یارانه و رفاه:
+      - "یارانه (WEL-001)": welfare/WEL-001/index.md
+      - "اعتراض یارانه (WEL-002)": welfare/WEL-002/index.md
+      - "دهک‌بندی (WEL-003)": welfare/WEL-003/index.md
+      - "اعتراض دهک (WEL-004)": welfare/WEL-004/index.md
+      - "سامانه حمایت (WEL-009)": welfare/WEL-009/index.md

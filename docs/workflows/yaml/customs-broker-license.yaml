@@ -1,0 +1,32 @@
+workflow_id: WF-004
+label_fa: "فرآیند تمدید پروانه کارگزاری (حق‌العمل‌کاری) گمرکی"
+nodes:
+  - id: CUS-006
+    type: prerequisite
+    label_fa: "داشتن کارت بازرگانی معتبر"
+    depends_on: []
+
+  - id: CUS-007
+    type: conditional
+    label_fa: "تمدید کارت بازرگانی (در صورت نیاز)"
+    depends_on: [CUS-006]
+    condition: "فقط اگر کارت بازرگانی فعلی منقضی یا نزدیک انقضا باشد."
+
+  - id: TAX-011
+    type: prerequisite
+    label_fa: "استعلام بدهی مالیاتی کارگزار"
+    depends_on: [CUS-006]
+
+  - id: BUS-020
+    type: prerequisite
+    label_fa: "دریافت گواهی ماده 186"
+    depends_on: [TAX-011]
+    condition: "پیش‌نیاز اجباری؛ بدون این گواهی، گمرک درخواست را رد می‌کند."
+
+  - id: CUS-019
+    type: step
+    label_fa: "ثبت و تایید تمدید پروانه کارگزاری"
+    depends_on: [BUS-020, CUS-007]
+    condition: "ثبت در mojavez.ir سپس تایید نهایی توسط گمرک استان محل سکونت کارگزار، نه گمرک مرکزی."
+
+edges_note: "کارت بازرگانی و پروانه کارگزاری باید هم‌زمان معتبر بمانند؛ عدم هماهنگی این دو رایج‌ترین دلیل توقف فرآیند است."
