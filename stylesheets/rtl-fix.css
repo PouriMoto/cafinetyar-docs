@@ -1,0 +1,410 @@
+/* =========================================
+   KAFINET YAR - MkDocs Material RTL Theme
+   Royal Blue + Gold + White
+========================================= */
+
+
+/* فونت اصلی */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+
+  --royal-blue: #123A8C;
+  --royal-blue-dark: #0B245C;
+  --gold: #D4AF37;
+  --gold-light: #F4D77B;
+  --white: #ffffff;
+  --bg-light: #F8FAFF;
+  --text-dark: #1E293B;
+
+}
+
+
+/* =========================
+   Base
+========================= */
+
+
+body {
+
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background: var(--bg-light);
+
+}
+
+
+.md-typeset {
+
+    direction: rtl;
+    text-align: right;
+    line-height: 2;
+    color: var(--text-dark);
+
+}
+
+
+.md-typeset p {
+
+    margin-bottom: 1.2rem;
+
+}
+
+
+/* فاصله تیترها */
+
+.md-typeset h1 {
+
+    color: var(--royal-blue);
+    font-weight:800;
+    border-bottom:3px solid var(--gold);
+    padding-bottom:15px;
+
+}
+
+
+.md-typeset h2 {
+
+    color: var(--royal-blue);
+    margin-top:2.5rem;
+
+}
+
+
+.md-typeset h3 {
+
+    color:#334155;
+
+}
+
+
+
+/* =========================
+   Navigation
+========================= */
+
+
+.md-nav {
+
+    direction:rtl;
+
+}
+
+
+.md-nav__link {
+
+    border-radius:8px;
+    padding:8px 12px;
+    transition:.2s;
+
+}
+
+
+.md-nav__link:hover {
+
+    background:#EEF3FF;
+    color:var(--royal-blue);
+
+}
+
+
+.md-nav__link--active {
+
+    background:var(--royal-blue);
+    color:white !important;
+
+}
+
+
+
+/* =========================
+   Header
+========================= */
+
+
+.md-header {
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--royal-blue),
+        #1D4ED8
+    );
+
+}
+
+
+.md-header__title {
+
+    font-weight:800;
+
+}
+
+
+
+/* =========================
+   Cards
+========================= */
+
+
+/* برای معرفی خدمات */
+
+.card {
+
+    background:white;
+    border-radius:16px;
+    padding:20px;
+
+    border-right:5px solid var(--gold);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+    margin:20px 0;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-3px);
+    transition:.25s;
+
+}
+
+
+
+/* =========================
+   Tables
+========================= */
+
+
+.md-typeset table {
+
+    direction:rtl;
+    width:100%;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.md-typeset table th {
+
+
+    background:var(--royal-blue);
+    color:white;
+    font-weight:700;
+
+}
+
+
+.md-typeset table tr:nth-child(even){
+
+    background:#F8FAFC;
+
+}
+
+
+.md-typeset table td {
+
+    padding:14px;
+
+}
+
+
+
+
+/* =========================
+   Lists
+========================= */
+
+
+.md-typeset ul,
+.md-typeset ol {
+
+    direction:rtl;
+    padding-right:2em;
+
+}
+
+
+.md-typeset li {
+
+    margin-bottom:.7rem;
+
+}
+
+
+
+/* =========================
+   SOP Checklist
+========================= */
+
+
+.md-typeset input[type="checkbox"] {
+
+
+    width:20px;
+    height:20px;
+
+    accent-color:var(--gold);
+
+    margin-left:10px;
+
+}
+
+
+.task-list-item {
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:10px 15px;
+
+    margin:8px 0;
+
+    box-shadow:
+    0 3px 12px rgba(0,0,0,.05);
+
+}
+
+
+
+/* =========================
+   Links
+========================= */
+
+
+.md-typeset a {
+
+
+    color:var(--royal-blue);
+    font-weight:600;
+
+}
+
+
+.md-typeset a:hover {
+
+    color:var(--gold);
+
+}
+
+
+
+/* =========================
+   Code
+========================= */
+
+
+.md-typeset code {
+
+    direction:ltr;
+    unicode-bidi:embed;
+
+    background:#111827;
+    color:#FACC15;
+
+    border-radius:6px;
+
+    padding:3px 8px;
+
+}
+
+
+
+/* =========================
+   Admonition / Callout
+========================= */
+
+
+.md-typeset .admonition {
+
+
+    border-radius:14px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+.md-typeset .admonition.note {
+
+    border-right:5px solid var(--royal-blue);
+
+}
+
+
+.md-typeset .admonition.tip {
+
+    border-right:5px solid var(--gold);
+
+}
+
+
+
+
+/* =========================
+   Buttons
+========================= */
+
+
+.md-button {
+
+
+    background:var(--royal-blue);
+    color:white !important;
+
+    border-radius:12px;
+
+    padding:12px 25px;
+
+    font-weight:700;
+
+}
+
+
+
+.md-button:hover {
+
+
+    background:var(--gold);
+
+}
+
+
+
+/* =========================
+   Search
+========================= */
+
+
+.md-search__input {
+
+
+    direction:rtl;
+    border-radius:12px;
+
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+
+.md-footer {
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--royal-blue-dark),
+        var(--royal-blue)
+    );
+
+}

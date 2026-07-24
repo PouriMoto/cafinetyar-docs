@@ -1,0 +1,37 @@
+workflow_id: WF-002
+label_fa: "فرآیند کامل کارت بازرگانی (شخص حقیقی)"
+nodes:
+  - id: CUS-010
+    type: start
+    label_fa: "ثبت‌نام سامانه جامع تجارت"
+    depends_on: []
+
+  - id: BUS-005
+    type: prerequisite
+    label_fa: "دریافت کد اقتصادی (پرونده بازرگان)"
+    depends_on: [CUS-010]
+
+  - id: TAX-011
+    type: prerequisite
+    label_fa: "استعلام بدهی مالیاتی"
+    depends_on: [BUS-005]
+
+  - id: BUS-020
+    type: prerequisite
+    label_fa: "دریافت گواهی ماده 186"
+    depends_on: [TAX-011]
+    condition: "بدهی مالیاتی باید صفر یا تسویه‌شده باشد."
+
+  - id: CUS-006
+    type: step
+    label_fa: "صدور کارت بازرگانی"
+    depends_on: [BUS-020]
+    condition: "احراز شرایط پایه: سن 24+، سابقه کار یا مدرک مرتبط، محل کسب معتبر."
+
+  - id: CUS-007
+    type: future_maintenance
+    label_fa: "تمدید کارت بازرگانی"
+    depends_on: [CUS-006]
+    note: "الگوی تدریجی مدت اعتبار: 1 سال، 1 سال، 3 سال، سپس 5 سال."
+
+edges_note: "یک شخص هم‌زمان نمی‌تواند هم کارت حقیقی هم حقوقی فعال داشته باشد - این باید در CUS-010 بررسی شود."

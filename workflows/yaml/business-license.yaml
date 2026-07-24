@@ -1,0 +1,43 @@
+workflow_id: WF-001
+label_fa: "فرآیند کامل جواز تاسیس / پروانه کسب"
+nodes:
+  - id: BUS-011
+    type: start
+    label_fa: "ثبت درخواست مجوز"
+    depends_on: []
+
+  - id: BUS-005
+    type: conditional
+    label_fa: "دریافت کد اقتصادی"
+    depends_on: [BUS-011]
+    condition: "فقط اگر شخص حقیقی است. برای شرکت رد شود، کد اقتصادی = شناسه ملی."
+
+  - id: TAX-011
+    type: prerequisite
+    label_fa: "استعلام بدهی مالیاتی"
+    depends_on: [BUS-005]
+    condition: "برای اشخاص حقوقی مستقیم بعد از BUS-011 اجرا شود، بدون نیاز به BUS-005."
+
+  - id: BUS-020
+    type: prerequisite
+    label_fa: "دریافت گواهی ماده 186"
+    depends_on: [TAX-011]
+    condition: "بدهی مالیاتی باید صفر یا تسویه‌شده باشد."
+
+  - id: BUS-014
+    type: step
+    label_fa: "بارگذاری مدارک"
+    depends_on: [BUS-020]
+
+  - id: BUS-008
+    type: step
+    label_fa: "تکمیل نهایی در نوین اصناف و دریافت جواز"
+    depends_on: [BUS-014]
+
+  - id: BUS-016
+    type: future_maintenance
+    label_fa: "تمدید مجوز (سالانه)"
+    depends_on: [BUS-008]
+    note: "چرخه تکرارشونده، هر سال."
+
+edges_note: "این گراف جهت‌دار است. type=prerequisite یعنی توقف اجباری تا شرط برآورده شود. type=conditional یعنی مسیر بسته به وضعیت مشتری فرق می‌کند."
