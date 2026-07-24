@@ -1,4 +1,4 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -27,13 +27,21 @@ jobs:
         run: |
           pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin pymdown-extensions
 
-      - name: Build project
-        run: |
-          python scripts/build_pages.py
-          # python scripts/build_catalog.py   # فعلاً کامنت کردیم تا خطا نده
-          mkdocs build --strict
+      - name: Run build_pages.py
+        run: python scripts/build_pages.py
 
-      - name: Setup GitHub Pages
+      - name: Run build_catalog.py (if exists)
+        run: |
+          if [ -f scripts/build_catalog.py ]; then
+            python scripts/build_catalog.py
+          else
+            echo "build_catalog.py not found - skipping"
+          fi
+
+      - name: Build MkDocs
+        run: mkdocs build --strict
+
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
@@ -42,5 +50,4 @@ jobs:
           path: 'site'
 
       - name: Deploy
-        id: deployment
         uses: actions/deploy-pages@v4
