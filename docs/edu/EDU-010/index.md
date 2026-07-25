@@ -1,4 +1,13 @@
-title: "ثبت سفارش کتاب درسی" category: "Education" code: "EDU-010" priority: "A" portal: "MyMedu + irtextbook.ir" season: "Mehr" difficulty: "متوسط" status: "Ready"
+---
+title: "ثبت سفارش کتاب درسی" 
+category: "Education" 
+code: "EDU-010" 
+priority: "A" 
+portal: "MyMedu + irtextbook.ir" 
+season: "Mehr" 
+difficulty: "متوسط" 
+status: "Ready"
+---
 📚 ثبت سفارش کتاب درسی
 �
 
