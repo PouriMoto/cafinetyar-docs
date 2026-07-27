@@ -290,3 +290,190 @@ EDU-010
 🟦 خدمات MyMedu
 
 </div>
+
+---
+title: "ثبت سفارش کتاب درسی"
+category: "Education"
+code: "EDU-010"
+priority: "A"
+portal: "MyMedu + irtextbook.ir"
+season: "Mehr"
+difficulty: "متوسط"
+status: "Ready"
+---
+
+<div class="service-hero">
+
+<div class="service-title">
+
+# 📚 ثبت سفارش کتاب درسی
+
+<p class="subtitle">
+ثبت سفارش و خرید کتاب‌های درسی دانش‌آموزان از سامانه آموزش و پرورش
+</p>
+
+</div>
+
+<div class="service-badges">
+
+<span class="badge badge-success">READY</span>
+<span class="badge">EDU-010</span>
+<span class="badge badge-orange">اولویت A</span>
+
+</div>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-card">
+<span class="label">⏱ زمان</span>
+<strong>۱۰ تا ۲۰ دقیقه</strong>
+</div>
+
+<div class="info-card">
+<span class="label">👤 حضور مشتری</span>
+<strong>نیازی نیست</strong>
+</div>
+
+<div class="info-card">
+<span class="label">🌐 سامانه</span>
+<strong>MyMedu + irtextbook</strong>
+</div>
+
+<div class="info-card">
+<span class="label">📈 سختی</span>
+<strong>متوسط</strong>
+</div>
+
+</div>
+
+<div class="alert alert-danger">
+
+## ⛔ قبل از اینکه حتی سامانه را باز کنید
+
+<ul>
+
+<li>ثبت‌نام مدرسه باید <strong>قطعی</strong> شده باشد.</li>
+
+<li>اطلاعات دانش‌آموز باید در <strong>سامانه سیدا</strong> ثبت شده باشد.</li>
+
+<li><strong>پایه دهم:</strong> تا زمانی که فرآیند <span class="text-danger">هدایت تحصیلی</span> انجام نشده باشد، حتی <strong>پیش‌ثبت‌نام</strong> نیز امکان‌پذیر نیست.</li>
+
+</ul>
+
+</div>
+
+---
+
+# 🧾 مرحله ۱ | بررسی شرایط اولیه
+
+<div class="checklist">
+
+<label><input type="checkbox"> ثبت‌نام مدرسه قطعی شده است.</label>
+
+<label><input type="checkbox"> اطلاعات در سیدا ثبت شده است.</label>
+
+<label><input type="checkbox"> پایه تحصیلی دانش‌آموز مشخص است.</label>
+
+<label><input type="checkbox"> کد ملی دانش‌آموز در دسترس است.</label>
+
+<label><input type="checkbox"> شماره موبایل ولی یا دانش‌آموز موجود است.</label>
+
+</div>
+
+> ❌ اگر هر کدام از موارد بالا برقرار نبود، ادامه فرآیند را متوقف کنید.
+
+---
+
+# 💬 سؤال اول اپراتور
+
+<div class="operator-box">
+
+👤 **از مشتری بپرسید:**
+
+**دانش‌آموز در چه پایه‌ای ثبت‌نام کرده است؟**
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>پایه</th>
+
+<th>اقدام اپراتور</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>اول تا نهم</td>
+
+<td>در صورت ثبت‌نام قطعی، ادامه فرآیند</td>
+
+</tr>
+
+<tr>
+
+<td>پایه دهم</td>
+
+<td>ابتدا وضعیت هدایت تحصیلی بررسی شود.</td>
+
+</tr>
+
+<tr>
+
+<td>یازدهم و دوازدهم</td>
+
+<td>در صورت ثبت‌نام قطعی، ادامه فرآیند</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+---
+
+# ⚙ مرحله ۲ | ورود به سامانه
+
+<div class="step-box">
+
+✅ ورود به **my.medu.ir**
+
+⬇
+
+✅ انتخاب بخش **ثبت سفارش کتاب درسی**
+
+⬇
+
+✅ انتقال به **irtextbook.ir**
+
+⬇
+
+✅ ورود اطلاعات دانش‌آموز
+
+⬇
+
+✅ بررسی پایه و مدرسه
+
+⬇
+
+✅ ثبت سفارش
+
+⬇
+
+✅ پرداخت
+
+⬇
+
+✅ چاپ یا ذخیره رسید
+
+</div>
